@@ -6,7 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class SeleniumBasic {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
 
@@ -25,6 +25,22 @@ public class SeleniumBasic {
         } else {
             System.out.println("Test failed");
         }
+
+        Thread.sleep(3000);
+
+        driver.navigate().to("https://www.duotech.io/");
+        Thread.sleep(3000);
+
+        driver.navigate().back();
+        Thread.sleep(3000);
+
+        driver.navigate().forward();
+        Thread.sleep(3000);
+
+        driver.navigate().refresh();
+        Thread.sleep(3000);
+
+        driver.quit();
 
     }
 }
