@@ -2,6 +2,9 @@ package day1;
 
 public class TestCase {
 
-    hjhj
+    public static void main(String[] args) {
+
+
+    }
 
 }
