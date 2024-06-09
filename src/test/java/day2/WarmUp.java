@@ -38,6 +38,8 @@ public class WarmUp {
 
            List <WebElement> titles = driver.findElements(By.xpath("//span[@data-testid='itemDescription']"));
 
+          // List <WebElement> titles = SeleniumUtils.locateByDataTestIdMultiple(driver, "span", "itemDescription");
+
             Assert.assertEquals(titles.size(),60);
 
             // 4. Verify the product titles contain the search term
@@ -46,6 +48,20 @@ public class WarmUp {
                 System.out.println(title.getText());
                 Assert.assertTrue(title.getText().toLowerCase().contains(term));
             }
+
+            // 5. click on the last title and verify the title text matches
+
+            WebElement lastOne = titles.get(titles.size()-1);
+
+            String expected = lastOne.getText();
+
+            lastOne.click();
+            Thread.sleep(1000);
+
+            String actual = driver.findElement(By.id("page-header-description")).getText();
+
+            Assert.assertEquals(actual,expected);
+
 
         } finally {
             Thread.sleep(1000);
