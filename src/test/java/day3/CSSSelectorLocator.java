@@ -37,7 +37,7 @@ public class CSSSelectorLocator {
 
         driver.findElement(By.cssSelector("#plate")).sendKeys("UFO3456");
 
-        Thread.sleep (3000);
+        Thread.sleep (1000);
 
 //Using attribute
 // input[aria-label='License Plate Number']
@@ -51,7 +51,7 @@ public class CSSSelectorLocator {
         // contains -> input[name*='name]
 
 
-        Thread.sleep (3000);
+        Thread.sleep (1000);
         driver.quit();
 
     }
