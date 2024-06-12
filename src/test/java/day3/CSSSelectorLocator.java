@@ -45,8 +45,15 @@ public class CSSSelectorLocator {
         driver.findElement(By.cssSelector("input[aria-label='License Plate Number']")).clear();
         driver.findElement(By.cssSelector("input[aria-label='License Plate Number']")).sendKeys("HELLO");
 
+
+        // starts with -> input[name^='name'
+        // ends with -> input[name$='name'
+        // contains -> input[name*='name]
+
+
         Thread.sleep (3000);
         driver.quit();
+
     }
 
 
