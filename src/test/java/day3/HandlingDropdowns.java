@@ -33,6 +33,13 @@ public class HandlingDropdowns {
         // new Select(driver.findElement(By.cssSelector("#us-state"))).selectByValue("VA"); // options value
         new Select(driver.findElement(By.cssSelector("#us-state"))).selectByIndex(48); //it is 1 based index
 
+        for (WebElement option : select.getOptions()) {
+            System.out.println(option.getText());
+        }
+
+        WebElement firstSelectedOption = select.getFirstSelectedOption();
+
+
 //        WebElement checkbox = driver.findElement(By.cssSelector(".checkbox-input_box")); //clicked on the other element that covered input
 //
 //        if (!checkbox.isSelected()){
