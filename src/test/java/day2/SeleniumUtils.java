@@ -22,6 +22,11 @@ public class SeleniumUtils {
     public static List<String> getElementsText(List<WebElement> list){
         List<String> actual = new ArrayList<>();
         list.forEach( s -> actual.add(s.getText() ) );
+
+//        for (WebElement element : list) {
+//            actual.add(element.getText());
+//        }
+
         return actual;
     }
 

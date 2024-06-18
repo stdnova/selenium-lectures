@@ -17,7 +17,7 @@ public class HandlingWebTables {
 
     @Test
 
-    public void testCase(){
+    public void testCase() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -70,6 +70,10 @@ public class HandlingWebTables {
 
         int rowCount = driver.findElements(By.xpath("//table[not(@border)]//tbody//tr")).size();
 
+        System.out.println(columnCount);
+        System.out.println(rowCount);
 
+        Thread.sleep(5000);
+        driver.quit();
     }
 }
