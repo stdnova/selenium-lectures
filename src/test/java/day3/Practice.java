@@ -34,19 +34,16 @@ public class Practice {
         modelDropdown.selectByVisibleText("RAV4");
 
         driver.findElement(By.cssSelector("button[class='search-by-filter__search-button desktop btn stat-button-link']")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
-        List<WebElement> modals = driver.findElements(By.id("modal"));
+        driver.findElement(By.id("ip-no")).click();
+        Thread.sleep(1000);
 
-        if (!modals.isEmpty()) {
-            modals.get(0).findElement(By.className("close-button")).click();
-        }
-
-        driver.findElement(By.xpath("//input[@name='q']")).sendKeys("XLE Premium", Keys.ENTER);
+        driver.findElement(By.name("q")).sendKeys("XLE Premium", Keys.ENTER);
 
 
 
-Thread.sleep(5000);
+Thread.sleep(2000);
 //driver.quit();
 
 
