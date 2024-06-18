@@ -75,6 +75,7 @@ public class WebTablesDynamic {
         List<Double> pricesCopy = new ArrayList<>(prices);
 
       //  Collections.sort(pricesCopy, Collections.reverseOrder());
+      //  Collections.sort(pricesCopy, Comparator.reverseOrder());
           pricesCopy.sort(Comparator.reverseOrder());
 
         System.out.println("Original: " + prices);
