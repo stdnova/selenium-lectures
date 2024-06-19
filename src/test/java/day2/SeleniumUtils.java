@@ -1,6 +1,7 @@
 package day2;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -51,5 +52,16 @@ public class SeleniumUtils {
         }
     }
 
+    public static void jsClick(WebDriver driver, WebElement elementToClick){
+        ( (JavascriptExecutor)driver ).executeScript("arguments[0].click();", elementToClick);
+    }
 
+    public static void scrollToWebElement(WebDriver driver, WebElement elementToScroll){
+    ( (JavascriptExecutor) driver).executeScript( "window.scrollBy(0, "+elementToScroll.getLocation().getY()+")");
+    }
+
+
+    public static void scrollBy(WebDriver driver, int x, int y){
+        ( (JavascriptExecutor) driver).executeScript( "window.scrollBy("+x+", "+y+")");
+    }
 }
