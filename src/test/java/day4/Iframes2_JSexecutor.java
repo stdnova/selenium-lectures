@@ -24,7 +24,9 @@ public class Iframes2_JSexecutor {
 
 // Interact again with the main window
 // Switch the context/focus to the main window
-driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent(); // gets to the main window
+
+//        driver.switchTo().parentFrame(); // used with nested iframes to switch to from inner back up one not the main default window
 
 //        driver.findElement(By.linkText("Contacts")).click();
 

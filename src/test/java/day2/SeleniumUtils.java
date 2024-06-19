@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class SeleniumUtils {
 
@@ -26,8 +27,28 @@ public class SeleniumUtils {
 //        for (WebElement element : list) {
 //            actual.add(element.getText());
 //        }
-
         return actual;
+    }
+
+    public static void switchToWindow(WebDriver driver){
+        String currentHandle = driver.getWindowHandle();
+       // Set<String> currentHandles = driver.getWindowHandles(); can go straight into the loop
+        for (String windowHandle : driver.getWindowHandles()) {
+            if(!windowHandle.equals(currentHandle)){
+                driver.switchTo().window(windowHandle);
+                return;
+            }
+        }
+    }
+
+    public static void switchToWindowByTitle(WebDriver driver, String title){
+        //Set<String> windowHandles = driver.getWindowHandles(); went straight into the loop
+        for (String windowHandle : driver.getWindowHandles()){
+            driver.switchTo().window(windowHandle);
+            if(driver.getTitle().equals(title)){
+                break;
+            }
+        }
     }
 
 
