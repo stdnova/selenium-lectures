@@ -3,8 +3,10 @@ package day6;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
+import java.awt.*;
 import java.time.Duration;
 
 public class FileUpload {
@@ -28,6 +30,10 @@ public class FileUpload {
 
         System.out.println(System.getProperty("user.dir") + "/src/test/java/day6/screenshot.png");
 
+//        Robot robot = new Robot();
+//        robot.mouseMove(200,500);
+
+        ChromeOptions options = new ChromeOptions(); // to predefine folder for downloading
 
 
     }
