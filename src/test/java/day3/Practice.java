@@ -34,16 +34,19 @@ public class Practice {
         modelDropdown.selectByVisibleText("RAV4");
 
         driver.findElement(By.cssSelector("button[class='search-by-filter__search-button desktop btn stat-button-link']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
-        driver.findElement(By.id("ip-no")).click();
-        Thread.sleep(1000);
+     //   driver.findElement(By.id("ip-no")).click();
+      //  Thread.sleep(1000);
 
-        driver.findElement(By.name("q")).sendKeys("XLE Premium", Keys.ENTER);
+        WebElement searchBox = driver.findElement(By.cssSelector("opensearch-P6NKLQ-input-desktop"));
+
+        searchBox.click();
+        searchBox.sendKeys("XLE Premium", Keys.ENTER);
 
 
 
-Thread.sleep(2000);
+// Thread.sleep(2000);
 //driver.quit();
 
 
