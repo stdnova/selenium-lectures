@@ -44,8 +44,8 @@ actions.keyDown(Keys.SHIFT).sendKeys(searchBar, "sdet").keyUp((Keys.SHIFT)).send
          */
 
 
-     // Thread.sleep(4000);
-     // driver.quit();
+     Thread.sleep(4000);
+      driver.quit();
 
 
     }
