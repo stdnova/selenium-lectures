@@ -12,7 +12,7 @@ import java.time.Duration;
 public class HandlingCheckboxes {
 
     @Test
-    public void testCase() {
+    public void testCase() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -34,7 +34,7 @@ public class HandlingCheckboxes {
             checkbox.click();
         }
 
-        driver.quit();
+          driver.quit();
     }
 
     }
