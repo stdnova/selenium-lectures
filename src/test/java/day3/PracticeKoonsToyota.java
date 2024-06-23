@@ -18,7 +18,7 @@ public class PracticeKoonsToyota {
     @Test
     public void testCase() throws InterruptedException, IOException {
 
-            WebDriver driver = null;
+    WebDriver driver = null;
 
             try {
                 driver = new ChromeDriver();
@@ -63,20 +63,16 @@ public class PracticeKoonsToyota {
 
                 driver.findElement(By.cssSelector("input[id$='-input-desktop'")).sendKeys("XLE Premium", Keys.ENTER);
 
-            } catch (Exception e){
+            }catch (Exception e){
 
                 File screenshotfile = ( (TakesScreenshot) driver ).getScreenshotAs(OutputType.FILE);
                 FileUtils.copyFile(screenshotfile, new File("src/test/java/day3/screenshotKoons.png"));
 
-            } finally {
-
+            }finally {
                 Thread.sleep(1000);
                 if (driver != null) {
                     driver.quit();
                 }
-
             }
-
-
     }
 }
