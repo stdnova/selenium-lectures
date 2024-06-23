@@ -26,25 +26,25 @@ public class PracticeKoonsToyota {
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
                 driver.get("https://www.koonstoyotatysonscorner.com/");
-                Thread.sleep(1000);
+             //   Thread.sleep(1000);
 
                 Select typeDropdown = new Select(driver.findElement(By.cssSelector("select[id='searchByFilterType']")));
                 Assert.assertEquals(typeDropdown.getFirstSelectedOption().getText(), "All");
                 typeDropdown.selectByVisibleText("New");
-                Thread.sleep(1000);
+               // Thread.sleep(1000);
 
                 Select makeDropdown = new Select(driver.findElement(By.cssSelector("select[id='searchByFilterMakes']")));
                 Assert.assertEquals(makeDropdown.getFirstSelectedOption().getText(), "Toyota");
                 makeDropdown.selectByVisibleText("Toyota");
-                Thread.sleep(1000);
+              //  Thread.sleep(1000);
 
                 Select modelDropdown = new Select(driver.findElement(By.cssSelector("select[id='searchByFilterModels']")));
                 Assert.assertEquals(modelDropdown.getFirstSelectedOption().getText(), "Any Model");
                 modelDropdown.selectByVisibleText("RAV4");
-                Thread.sleep(1000);
+              //  Thread.sleep(1000);
 
                 driver.findElement(By.cssSelector("button[class='search-by-filter__search-button desktop btn stat-button-link']")).click();
-                Thread.sleep(1000);
+              //  Thread.sleep(1000);
 
                 try {
                     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -69,7 +69,7 @@ public class PracticeKoonsToyota {
                 FileUtils.copyFile(screenshotfile, new File("src/test/java/day3/screenshotKoons.png"));
 
             }finally {
-                Thread.sleep(1000);
+
                 if (driver != null) {
                     driver.quit();
                 }
