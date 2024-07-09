@@ -26,8 +26,6 @@ public class CheckboxesRadioWithLoop {
                 "test", Keys.ENTER);
 
         List<WebElement> elements = driver.findElements(By.cssSelector("input[type='checkbox']"));
-
-
         for (WebElement element : elements) {
             if (!element.isSelected()){
                 element.click();
@@ -38,8 +36,10 @@ public class CheckboxesRadioWithLoop {
 
         driver.findElement(By.cssSelector("a[href='Process.aspx']")).click();
 
-        driver.findElement(By.cssSelector("input[value='MasterCard']")).click();
 
+    //    driver.findElement(By.cssSelector("input[value='MasterCard']")).click();
+
+        Thread.sleep(5000);
         List<WebElement> radioList = driver.findElements(By.cssSelector("input[type='radio']"));
 
         for (WebElement button : radioList) {
@@ -48,7 +48,7 @@ public class CheckboxesRadioWithLoop {
         }
 
         Thread.sleep(3000);
-driver.quit();
+        driver.quit();
     }
 
     }

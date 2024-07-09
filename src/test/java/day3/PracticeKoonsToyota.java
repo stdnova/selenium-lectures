@@ -26,7 +26,7 @@ public class PracticeKoonsToyota {
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
                 driver.get("https://www.koonstoyotatysonscorner.com/");
-             //   Thread.sleep(1000);
+                Thread.sleep(1000);
 
                 Select typeDropdown = new Select(driver.findElement(By.cssSelector("select[id='searchByFilterType']")));
                 Assert.assertEquals(typeDropdown.getFirstSelectedOption().getText(), "All");
